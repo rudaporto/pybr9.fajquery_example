@@ -7,13 +7,18 @@ README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = [
-    'pyramid',
+    'pyramid<1.5-dev',
     'SQLAlchemy',
     'transaction',
     'pyramid_tm',
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
+    'formalchemy',
+    'pyramid_formalchemy',
+    'pyramid_fanstatic',
+    'fanstatic==0.16',
+    'fa.jquery',
     ]
 
 setup(name='pybr9.fajquery_example',
