@@ -5,11 +5,11 @@ log = logging.getLogger(__name__)
 
 
 def includeme(config):
-    settings = config.registry.settings.get('pybr9fajquery_example.fa_settings}}', {})
+    settings = config.registry.settings.get('pybr9fajquery_example.fa_config', {})
 
     # Example to add a specific model
-    #config.formalchemy_model("/my_model", package='pybr9fajquery_example',
-    #                         model='pybr9fajquery_example.models.MyModel')
-    #                         **settings)
+    config.formalchemy_model("/my_model",
+                             model='pybr9fajquery_example.models.MyModel',
+                             **settings)
 
     log.info('pybr9fajquery_example.faroutes loaded')
