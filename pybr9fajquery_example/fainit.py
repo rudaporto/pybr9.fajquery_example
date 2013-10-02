@@ -34,10 +34,11 @@ def includeme(config):
     settings = {'package': 'pybr9fajquery_example',
                 'view': model_view,
                 'session_factory': session_factory,
+                'forms': faforms,
                }
     config.registry.settings['pybr9fajquery_example.fa_config'] = settings
 
-    config.formalchemy_admin("/admin", models=models, forms=faforms,
+    config.formalchemy_admin("/admin", models=models,
                              **settings)
 
     # Adding the package specific routes
