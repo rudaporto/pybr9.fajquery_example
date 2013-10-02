@@ -24,7 +24,7 @@ class MyModel(Base):
     name = Column(Text)
     value = Column(Integer)
 
-    def __init__(self, name, value):
+    def __init__(self, name='', value=0):
         self.name = name
         self.value = value
 
